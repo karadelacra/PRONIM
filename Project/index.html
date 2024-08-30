@@ -1,0 +1,412 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Proyecto: Registro de datos generales.">
+    <meta name="author" content="TDAW">
+    <title>Web | Proyecto de registro de datos</title>
+   
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+
+    <link rel="stylesheet" href="assets/vendors/animate/animate.css">
+
+    <!-- Bootstrap + FoodHut main styles -->
+	<link rel="stylesheet" href="assets/css/foodhut.css">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    
+    <!-- Navbar -->
+    <nav class="custom-navbar navbar navbar-expand-lg navbar-dark fixed-top" data-spy="affix" data-offset-top="10">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">ESCOM</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#blog">Carreras<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallary">Conócenos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#book-table">Redes</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#testmonial">Creadores</a>
+                </li>
+                <!--<li class="nav-item">
+                    <a class="nav-link" href="#contact">Contactos</a>
+                </li>-->
+            </ul>
+            <a class="navbar-brand m-auto" href="https://www.escom.ipn.mx/">
+                <img src="assets/imgs/escom.jpg" class="brand-img" alt="Logo de ESCOM">
+                <span class="brand-txt">Nuevo Ingreso</span>
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="formulario.html" class="btn btn-primary ml-xl-4">Registro</a>
+                </li>
+                <li class="nav-item">
+                    <a href="recuperacion.php" class="btn btn-primary ml-xl-4">Recuperación de horario</a>
+                </li>
+                <li class="nav-item">
+                    <a href="admin.html" class="btn btn-primary ml-xl-4">Administrador</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+    <!-- Encabezado -->
+    <header id="home" class="header">
+        <div class="overlay text-white text-center">
+            <h1 class="display-2 font-weight-bold my-3">Bienvenidos a la ESCOMunidad</h1>
+            <h2 class="display-4 mb-5 ">Alumnos de Nuevo Ingreso (Enero 2024)</h2>
+            <a class="btn btn-lg btn-primary" href="formulario.html">Registrarse</a>
+        </div>
+    </header>
+
+    <!-- Sección  ESCOM-->
+    <div id="about" class="container-fluid wow fadeIn" id="about"data-wow-duration="1.5s">
+        <div class="row">
+            <div class="col-lg-6 has-img-bg"></div>
+            <div class="col-lg-6">
+                <div class="row justify-content-center text-justify">
+                    <div class="col-sm-8 py-3 my-3">
+                        <h4 class="mb-2 ">Instituto Politécnico Nacional</h4>
+                        <h2 class="mb-4">ESCOM</h2>
+                        <p><b>¡Bienvenidos alumnos de nuevo ingreso!</b> Es un placer darles la bienvenida a nuestra institución educativa. 
+                            Estamos emocionados de tenerlos como parte de nuestra ESCOMunidad y de comenzar este nuevo capítulo en sus 
+                            vidas académicas. </p>
+                        
+                        <p><b>Nuestro objetivo es brindarles una educación de calidad, que les permita alcanzar sus metas y aspiraciones.</b></p>
+                        
+                        <p>Estamos comprometidos en apoyarlos en su viaje educativo y en fomentar un ambiente inclusivo y colaborativo
+                        donde cada uno de ustedes pueda florecer. Les deseamos mucho éxito en su trayectoria académica y esperamos que disfruten
+                         al máximo esta experiencia.</p>
+                          
+                         <h4 class="text-xl-center"> ¡Bienvenidos nuevamente y adelante hacia un futuro brillante!</h4>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Espacio 1  -->
+    <div class="container-fluid has-bg-overlay has-height-xs" ></div>
+
+    <!-- BLOG Section  -->
+    <div id="blog" class="container-fluid bg-dark text-light py-5 text-center wow fadeIn">
+        <h2 class="section-title">Programas Académicos</h2>
+        <h2 class="mb-3"> & Clubs</h2>
+        <div class="row justify-content-center">
+            <div class="col-sm-7 col-md-4 mb-3">
+                <ul class="nav nav-pills nav-justified mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#foods" role="tab" aria-controls="pills-home" aria-selected="true">Carreras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#juices" role="tab" aria-controls="pills-profile" aria-selected="false">Clubes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="foods" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card bg-transparent border my-3 my-md-0">
+                            <img src="assets/imgs/blog-1.jpg" alt="template by DevCRID http://www.devcrud.com/" class="rounded-0 card-img-top mg-responsive">
+                            <div class="card-body">
+                                <h1 class="text-center mb-4"><a href="https://www.escom.ipn.mx/htmls/oferta/isc2020.php" class="badge badge-primary">I. S. C.</a></h1>
+                                <h4 class="pt20 pb20">Ingeniería en Sistemas Computacionales </h4>
+                                <p class="text-white">Formar Ingenieros en Sistemas Computacionales de sólida preparación científica y tecnológica en los ámbitos del desarrollo de 
+                                    software y hardware, que propongan, analicen, diseñen, desarrollen, implementen y gestionen sistemas computacionales. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-transparent border my-3 my-md-0">
+                            <img src="assets/imgs/blog-2.jpg" alt="template by DevCRID http://www.devcrud.com/" class="rounded-0 card-img-top mg-responsive">
+                            <div class="card-body">
+                                <h1 class="text-center mb-4"><a href="https://www.escom.ipn.mx/htmls/oferta/iia2020.php" class="badge badge-primary">I. I. A.</a></h1>
+                                <h4 class="pt20 pb20">Ingeniería en Inteligencia Artificial</h4>
+                                <p class="text-white"> Formar expertos capaces de desarrollar sistemas inteligentes utilizando diferentes metodologías en las diferentes etapas 
+                                    de desarrollo y aplicando algoritmos en áreas como aprendizaje de máquina, procesamiento automático de lenguaje natural, visión artificial y modelos bioinspirados. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-transparent border my-3 my-md-0">
+                            <img src="assets/imgs/blog-3.jpg" alt="template by DevCRID http://www.devcrud.com/" class="rounded-0 card-img-top mg-responsive">
+                            <div class="card-body">
+                                <h1 class="text-center mb-4"><a href="https://www.escom.ipn.mx/htmls/oferta/lcd2020.php" class="badge badge-primary">L. C. D.</a></h1>
+                                <h4 class="pt20 pb20">Licenciatura en Ciencia de Datos</h4>
+                                <p class="text-white">Formar expertos capaces de extraer conocimiento implícito y complejo, potencialmente útil a partir de grandes conjuntos de datos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="juices" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <div class="row">
+                    <div class="col-md-4 my-3 my-md-0">
+                        <div class="card bg-transparent border">
+                            <img src="assets/imgs/blog-4.jpg" alt="template by DevCRID http://www.devcrud.com/" class="rounded-0 card-img-top mg-responsive">
+                            <div class="card-body">
+                                <h1 class="text-center mb-4"><a href="https://web.facebook.com/profile.php?id=61551518828511" class="badge badge-primary">Artísticos</a></h1>
+                                <h4 class="pt20 pb20">Impartido por alumnos y profesores</h4>
+                                <p class="text-white">El club artístico de baile es un grupo de estudiantes apasionados por la danza y las artes escénicas. Su objetivo es fomentar la expresión creativa a través de la danza y promover la camaradería entre los miembros.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 my-3 my-md-0">
+                        <div class="card bg-transparent border">
+                            <img src="assets/imgs/blog-5.jpg" alt="template by DevCRID http://www.devcrud.com/" class="rounded-0 card-img-top mg-responsive">
+                            <div class="card-body">
+                                <h1 class="text-center mb-4"><a href="https://web.facebook.com/ESCOMculturaydeportes/photos/a.131685225311492/218769883269692/" class="badge badge-primary">Deportivos</a></h1>
+                                <h4 class="pt20 pb20">Impartido por alumnos y profesores</h4>
+                                <p class="text-white">El club deportivo es una organización estudiantil que promueve la participación en actividades físicas y deportivas. Su objetivo es fomentar un estilo de vida saludable y desarrollar habilidades deportivas en los estudiantes. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 my-3 my-md-0">
+                        <div class="card bg-transparent border">
+                            <img src="assets/imgs/blog-6.jpg" alt="template by DevCRID http://www.devcrud.com/" class="rounded-0 card-img-top mg-responsive">
+                            <div class="card-body">
+                                <h1 class="text-center mb-4"><a href="https://web.facebook.com/algoritmiaescom" class="badge badge-primary">Informáticos</a></h1>
+                                <h4 class="pt20 pb20">Impartido por alumnos y profesores</h4>
+                                <p class="text-white">El club informático es un grupo de estudiantes interesados en la tecnología y la informática. Su objetivo es aprender y explorar temas relacionados con la informática, la programación y la robótica, fomentando la colaboración y el intercambio de conocimientos </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Espacio 2  -->
+    <div class="container-fluid has-bg-overlay has-height-xs" ></div>
+
+    <!--  gallary Section  -->
+    <div id="gallary" class="text-center bg-dark text-light has-height-md middle-items wow fadeIn">
+        <h2 class="section-title">Sitios de interés</h2>
+    </div>
+    <div class="gallary row">
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-1.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon ">Salón</i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-2.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon">Explanada</i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-3.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon">Lab Electronica</i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-4.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon">Lab Cómputo</i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-5.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon"> Barra de café</i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-6.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon"> Área Verde</i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-7.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon"> Biblioteca </i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-8.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon"> Palapas </i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-9.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon"> Canchas </i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-10.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon">Papelería</i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-11.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon">Ed. Gobierno</i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="assets/imgs/gallary-12.jpg" alt="template by DevCRID http://www.devcrud.com/" class="gallary-img">
+            <a href="#" class="gallary-overlay">
+                <i class="gallary-icon"> Auditorio </i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Sección Redes  -->
+    
+    <div class="container-fluid has-bg-overlay text-center text-light has-height-lg middle-items" id="book-table">
+        <div class="">
+            <h2 class="section-title mb-5 my-5 font-weight-bold"> <i class="ti-facebook ti-35px"></i> Redes Institucionales <i class="ti-twitter ti-35px"></i> </h2>
+            <div class="row justify-content-center mb-5">
+                <div class="panelr col-md-6 my-3 my-md-0">
+                    <h3 class="mb-4 font-weight-bolder">Facebook</h3>
+                    <div class="fb-page" data-href="https://www.facebook.com/escomipnmx" data-tabs="timeline" data-width="500" data-height="600" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/escomipnmx" class="fb-xfbml-parse-ignore">
+                            <a href="https://www.facebook.com/escomipnmx">Facebook by ESCOM</a>
+                        </blockquote>
+                    </div> <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0" nonce="tu_nonce"></script> 
+                </div>
+                <div class="panelr col-md-6 my-3 my-md-0">
+                    <h3 class="mb-3 text-center font-weight-bolder">Twitter</h3>
+                    <center><a class="twitter-timeline" data-width="500" data-height="600" href="https://twitter.com/escomunidad">Tweets by ESCOM</a> </center>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+            <div class="row justify-content-center mb-5">
+                    <div class="icono col-md-6 my-5 my-md-0">
+                        <h2><a href="https://www.facebook.com/escomipnmx/" title="Facebook-ESCOM"><i class="ti-facebook"></i></a><br>/ESCOM IPN</h2>
+                    </div>
+                    <div class="icono col-md-6 my-5 my-md-0">
+                        <h2><a href="http://www.twitter.com/escomunidad/" title="Twitter-ESCOM"><i class="ti-twitter"></i></a><br>@escomunidad</h2>
+                    </div>
+                       
+            </div>
+        </div>
+    </div>
+     
+
+    
+    <!-- Diseñadores Section  -->
+    <div id="testmonial" class="container-fluid wow fadeIn bg-dark text-light has-height-lg middle-items">
+        <h2 class="section-title my-5 text-center font-weight-bolder">Diseñadores</h2>
+        <div class="row mt-3 mb-5">
+            <div class="col-md-3 my-3 my-md-0">
+                <div class="testmonial-card">
+                    <img src="assets/imgs/Isra.jpeg" alt="template by DevCRID http://www.devcrud.com/" class="rounded-0 card-img-top mg-responsive">
+                    <h3 class="testmonial-title my-3">Israel Carmona</h3>
+                    <h6 class="testmonial-subtitle">Diseñador Web</h6>
+                    <div class="testmonial-body">
+                        <p>Israel Carmona es una persona apasionada, creativa y dedicada. Es conocido por su habilidad para resolver problemas de manera eficiente y por su capacidad para trabajar en equipo. Es un individuo comprometido con su crecimiento personal y profesional, siempre en busca de nuevas oportunidades para aprender y superarse.
+                          </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 my-3 my-md-0">
+
+                <div class="testmonial-card">
+                    <img src="assets/imgs/Pao.jpg" alt="template by DevCRID http://www.devcrud.com/" class="rounded-0 card-img-top mg-responsive">
+                    <h3 class="testmonial-title my-3">Paola Flores</h3>
+                    <h6 class="testmonial-subtitle">Diseñadora Web</h6>
+                    <div class="testmonial-body">
+                        <p>Paola Flores es una persona dinámica y amigable, con una personalidad cálida y acogedora. 
+                            Es conocida por su habilidad para comunicarse de manera efectiva y establecer conexiones significativas con los demás. 
+                            Paola es una persona empática y comprensiva, siempre dispuesta a ayudar y brindar apoyo cuando es necesario.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 my-3 my-md-0">
+                <div class="testmonial-card">
+                    <img src="assets/imgs/Juan.jpeg" alt="template by DevCRID http://www.devcrud.com/" class="rounded-0 card-img-top mg-responsive">
+                    <h3 class="testmonial-title my-3">Juan C. González</h3>
+                    <h6 class="testmonial-subtitle">Diseñador Web</h6>
+                    <div class="testmonial-body">
+                        <p>Juan C. González es una persona inteligente y analítica, con una mente aguda para el razonamiento y la resolución de problemas. 
+                            Es conocido por su capacidad para pensar de manera estratégica. 
+                            Juan es una persona comprometida y disciplinada, con una ética de trabajo sólida y un enfoque constante en la excelencia.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 my-3 my-md-0">
+                <div class="testmonial-card">
+                    <img src="assets/imgs/Leo.jpeg" alt="template by DevCRID http://www.devcrud.com/" class="rounded-0 card-img-top mg-responsive">
+                    <h3 class="testmonial-title my-3">Leonardo Jiménez</h3>
+                    <h6 class="testmonial-subtitle">Diseñador Web</h6>
+                    <div class="testmonial-body">
+                        <p>Leonardo Jiménez es una persona carismática y encantadora, conocido por su capacidad para conectar con los demás.
+                             Es un individuo extrovertido y comunicativo, que disfruta de entablar conversaciones interesantes y compartir experiencias. Es un líder nato, capaz de motivar e inspirar a los demás con su entusiasmo y energía.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT Section  -->
+    <div id="contact" class="container-fluid bg-dark text-light border-top wow fadeIn">
+        <div class="row">
+            <div class="col-md-6 px-0">
+                <div id="map" style="width: 100%; height: 100%; min-height: 400px"></div>
+            </div>
+            <div class="col-md-6 px-5 has-height-lg middle-items">
+                <h3>Mapa</h3>
+                <p>La Escuela Superior de Cómputo (ESCOM) del Instituto Politécnico Nacional (IPN) se encuentra ubicada en el campus Zacatenco, en la zona norte de la 
+                    Ciudad de México. El edificio de la ESCOM es una estructura moderna y distintiva, con amplias instalaciones diseñadas para crear un entorno propicio para el aprendizaje y la investigación en el campo de la computación.</p>
+                <div class="text-muted">
+                    <p><span class="ti-location-pin pr-3"></span> Av. Juan de Dios Bátiz s/n, Unidad Profesional "Adolfo López Mateos". Col. Lindavista, C.P. 07738</p>
+                    <p><span class="ti-support pr-3"></span> (123) 456-7890</p>
+                    <p><span class="ti-email pr-3"></span>alumnosweb02@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="bg-dark text-light text-center border-top wow fadeIn">
+        <p class="mb-0 py-3 text-muted small">&copy; Copyright <script>document.write(new Date().getFullYear())</script> Made with <i class="ti-heart text-danger"></i> By Alumnos ESCOM</a></p>
+    </div>
+    <!--end of page footer -->
+
+	<!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- wow.js -->
+    <script src="assets/vendors/wow/wow.js"></script>
+    
+    <!-- google maps -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap"></script>
+
+    <!-- FoodHut js -->
+    <script src="assets/js/foodhut.js"></script>
+
+</body>
+</html>

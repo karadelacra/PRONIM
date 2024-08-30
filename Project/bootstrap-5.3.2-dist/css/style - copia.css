@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+/*Encabezado*/
+a{
+    color: white;
+    height: 100%;
+}
+header{
+    height: auto;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    box-sizing: border-box;
+    height: 85px;
+    transition: 0.5s;
+    background-color: rgba(25, 24, 24, 0.5);
+}
+
+.logo{
+    height: 60%;
+}
+.menu-item
+{
+    margin: 0 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+    color: white;
+}
+.cta{
+    padding: 10px 24px;
+    border-radius: 30px;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.cta:hover{
+    color: white;
+    background-color: #222A3F;
+}
+.menu-item:hover{
+    color: var(--main-color);
+}
+.main-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+/*Fin del Encabezado*/
+body{
+    background-image: url(fo1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#parrafo{
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 20px;
+    color: white;
+}
+
+.formulario {
+    background: rgba(0, 0, 0, .3);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
+}
+
+.form-control {
+    background: rgba(0, 0, 0, .3);
+    border-style: none;
+    transition: 0.5s ease-in;
+    outline: none;
+    box-shadow: none;
+    color: white;
+}
+
+.form-control:focus {
+    background: rgba(0, 0, 0, .3);
+    box-shadow: none;
+    outline: none;
+    color: white;
+}
+
+.form-control::placeholder {
+    color: white;
+}
+
+.ingresar {
+    background: #222A3F;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700!important;
+    color: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
+    transition: 0.5s ease-in;
+}
+
+.ingresar:hover {
+    color: white;
+}
+

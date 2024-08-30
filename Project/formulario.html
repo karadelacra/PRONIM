@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <title>Registro de Datos Generales</title>
+
+     <!-- font icons -->
+     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+     <link rel="stylesheet" href="assets/vendors/animate/animate.css">
+     
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/formulario.css">
+    <link rel="stylesheet" href="css/estylecab.css">
+    
+        <script src="js/form.js"></script>
+        
+</head>
+    <body>
+        <header id="header">
+            <img src="images/escom.jpg" alt="" class="logo">
+            <span class="brand-txt">Registro de Datos Generales</span>
+          <ul class="main-menu">
+            <li class="menu-item"><a href="index.html">Inicio</a></li>
+          </ul>
+        </header>
+        <br>
+        <br>
+        <div class="container">
+        <div class="row my-5 text-light">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <br>
+
+                <form action="revisar.php" class="diseño" id="registroForm" method="post">
+                    <h3 class="d-flex justify-content-center ">Identidad</h3>
+                    <div class="form-group">
+                    <label for="noBoleta" class="form-label " > <i class="ti-id-badge"> </i>No. de Boleta: </label>
+                    <input type="text" id="noBoleta" class="form-control border border-white " name="noBoleta" required placeholder="Ej.PP22014658">
+                    </div>
+                    <div class="form-group">
+                    <label for="curp" class="form-label" > <i class="ti-id-badge"> </i>CURP: </label>
+                    <input type="text" id="curp" class="form-control border border-white" name="curp" required placeholder="Ej.IRSD040997HDFRNSA9">
+                    </div>
+                    <div class="form-group">
+                    <label for="nombre" class="form-label " ><i class="ti-user"> </i>Nombre: </label>
+                    <input type="text" id="nombre" class="form-control border border-white" name="nombre" required placeholder="Nombre o Nombres">
+                    </div>
+                    <div class="form-group">
+                    <label for="apellidoPaterno" class="form-label"  ><i class="ti-user"> </i>Apellido Paterno: </label>
+                    <input type="text" id="apellidoPaterno" name="apellidoPaterno" required class="form-control border border-white">
+                    </div>
+                    <div class="form-group">
+                    <label for="apellidoMaterno" class="form-label" ><i class="ti-user"> </i>Apellido Materno: </label>
+                    <input type="text" id="apellidoMaterno" required name="apellidoMaterno" class="form-control border border-white" required>
+                    </div>
+                    <div class="form-group">
+                    <label for="fechaNacimiento" class="form-label "><i class="ti-control-stop"> </i>Fecha de nacimiento: </label>
+                    <input type="date" id="fechaNacimiento" required class="form-control border border-white bg-light text-dark" name="fechaNacimiento" required>
+                    </div><br>
+                    <div class="form-group justify-content-center">
+                    <label for="genero"  class="form-check-label"><i class="ti-id-badge"> </i>Género</label> <br><br>
+                    <input type="radio" required name="genero" id="genero" class="form-check-input" value="Femenino"> Femenino &nbsp;&nbsp;&nbsp; 
+                    <input type="radio" name="genero" id="genero" class="form-check-input" value="Masculino"> Masculino &nbsp;&nbsp;&nbsp; 
+                    <input type="radio" name="genero" id="genero" class="form-check-input" value="Otro"> Otro <br>
+                    </div>
+                    
+                    <br>
+                    <div class="form-group">
+                        <label for="tieneDiscapacidad" class="form-check-label"><i class="ti-heart-broken"> </i> ¿Tienes alguna discapacidad? </label><br>
+                            <input type="radio" id="tieneDiscapacidadSi" value="on" name="tieneDiscapacidad" class="form-check-input"> Sí
+                        
+                        <label>
+                            <input type="radio" id="tieneDiscapacidadNo" value="off" name="tieneDiscapacidad" class="form-check-input" checked> No
+                        </label>
+                    </div>
+                            
+                                <div id="tipoDiscapacidadContainer" style="display: none;">
+                                    <label for="tipoDiscapacidad" class="form-label"><i class="ti-heart-broken"> </i>Tipo de discapacidad: </label>
+                                    <select id="tipoDiscapacidad" class="form-select form-select-sm" name="discapacidad" aria-label=".form-select-sm example">
+                                        <option value="   ">De click para desplegar opciones</option>
+                                        <option value="Discapacidad auditiva" class="text-dark">Con discapacidad auditiva</option>
+                                        <option value="Discapacidad motriz con silla de ruedas " class="text-dark">Con discapacidad motriz (usuaria de silla de ruedas)</option>
+                                        <option value="Con discapacidad motriz con muletas" class="text-dark">Con discapacidad motriz usuaria de muletas</option>
+                                        <option value="Con discapacidad motriz con bastón" class="text-dark">Con discapacidad motriz usuaria de bastón</option>
+                                        <option value="Discapacidad visual" class="text-dark">Con discapacidad visual</option>
+                                        <option value="">Otra</option>
+                                    </select>
+    
+                                    <div id="otraDiscapacidadContainer" style="display: none;">
+                                        <br>
+                                        <label for="otraDiscapacidad" class="form-label"><i class="ti-heart-broken"> </i>Especificar otra discapacidad: </label>
+                                        <input type="text" id="otraDiscapacidad" name="discapacidad2">
+                                    </div>
+                                </div>
+                    <br>
+                        <!-- Otros campos de identidad -->
+                    <h3 class=" d-flex justify-content-center">Contacto</h3>
+                    <div class="form-gruop">
+                    <label for="cyn" class="form-label"><i class="ti-direction"> </i>Calle y número: </label>
+                    <input type="text" id="cyn" class="form-control border border-white" name="cyn" placeholder="Nombre de calle y número exterior" required >
+                    </div>
+                    <div class="form-group">
+                    <label for="colonia" class="form-label"><i class="ti-direction"> </i>Colonia: </label>
+                    <input type="text" id="colonia" class="form-control border border-white" name="colonia" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                    <label for="alcaldia" class="form-label"><i class="ti-direction"> </i>Alcaldía: </label>
+                        <select name="alcaldia" id="alcaldia" class="form-select form-select-sm border border-white" required>
+                            <option value="" >Seleccione una opcion</option>
+                            <option value="Alvaro Obregon" class="text-dark">Alvaro Obregón</option>
+                            <option value="Azcapotzalco" class="text-dark">Azcapotzalco</option>
+                            <option value="Benito Juarez" class="text-dark">Benito Juarez</option>
+                            <option value="Coyoacan" class="text-dark">Coyoacán</option>
+                            <option value="Cuajimalpa de Morelos" class="text-dark">Cuajimalpa de Morelos</option>
+                            <option value="Cuauhtemoc" class="text-dark">Cuauhtemoc</option>
+                            <option value="Gustavo A. Madero" class="text-dark">Gustavo A. Madero</option>
+                            <option value="Iztacalco" class="text-dark">Iztacalco</option>
+                            <option value="Iztapalapa" class="text-dark">Iztapalapa</option>
+                            <option value="La Magdalena Contreras" class="text-dark">La Magdalena Contreras</option>
+                            <option value="Miguel Hidalgo" class="text-dark">Miguel Hidalgo</option>
+                            <option value="Milpa Alta" class="text-dark">Milpa Alta</option>
+                            <option value="Tlahuac" class="text-dark">Tlahuac</option>
+                            <option value="Tlalpan" class="text-dark">Tlalpan</option>
+                            <option value="Venustiano Carranza" class="text-dark">Venustiano Carranza</option>
+                            <option value="Xochimilco" class="text-dark">Xochimilco</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                    <label for="CodigoPost" class="form-label"><i class="ti-direction"> </i>Código Postal: </label> 
+                    <input type="number" maxlength="5" name="codigo" id= "CodigoPost" class="form-control border border-white" placeholder="Solo 5 dígitos" required>
+                    </div>
+                    <div class="form-group">
+                    <label for="telefono" class="form-label "><i class="ti-mobile"> </i>Teléfono: </label>
+                    <input type="text" id="telefono" class="form-control border border-white" name="telefono" placeholder="10 dígitos" required>
+                    </div>
+                    <div class="form-group">
+                    <label for="correo" class="form-label"><i class="ti-email"> </i>Correo electrónico: </label>
+                    <input type="email" id="correo" class="form-control border border-white" name="email" placeholder="Example@gmail.com" required>
+                    </div>  
+                    <br>
+                        <!-- Otros campos de contacto -->
+                       
+                    <div class="form-group">
+                    <h3 class="d-flex justify-content-center">Procedencia</h3>
+                    <label for="escuelaProcedencia" class="form-label"><i class="ti-agenda"> </i>Escuela de procedencia: </label>
+                    <select id="escuelaProcedencia" class="form-select form-select-sm border border-white" name="escuela" required>
+                            <option value="">De click para desplegar opciones</option>
+                            <option value="CECyT 1 Gonzalo Vázquez Vela" class="text-dark">CECyT 1 Gonzalo Vázquez Vela</option>
+                            <option value="CECyT 2 Miguel Bernard" class="text-dark">CECyT 2 Miguel Bernard</option>
+                            <option value="CECyT 3 Estanislao Ramírez Ruiz" class="text-dark">CECyT 3 Estanislao Ramírez Ruiz</option>
+                            <option value="CECyT 4 Lázaro Cárdenas" class="text-dark">CECyT 4 Lázaro Cárdenas</option>
+                            <option value="CECyT 5 Benito Juárez García" class="text-dark">CECyT 5 Benito Juárez García </option>
+                            <option value="CECyT 6 Miguel Othón de Mendizábal" class="text-dark">CECyT 6 Miguel Othón de Mendizábal</option>
+                            <option value="CECyT 7 Cuauhtémoc" class="text-dark">CECyT 7 Cuauhtémoc</option>
+                            <option value="CECyT 8 Narciso Bassols García" class="text-dark">CECyT 8 Narciso Bassols García </option>
+                            <option value="CECyT 9 Juan de Dios Bátiz" class="text-dark">CECyT 9 Juan de Dios Bátiz</option>
+                            <option value="CECyT 10 Carlos Vallejo Márquez" class="text-dark">CECyT 10 Carlos Vallejo Márquez</option>
+                            <option value="CECyT 11 Wilfrido Massieu Pérez" class="text-dark">CECyT 11 Wilfrido Massieu Pérez</option>
+                            <option value="CECyT 12 José María Morelos y Pavón" class="text-dark">CECyT 12 José María Morelos y Pavón </option>
+                            <option value="CECyT 13 Ricardo Flores Magón" class="text-dark">CECyT 13 Ricardo Flores Magón</option>
+                            <option value="CECyT 14 Luis Enrique Erro" class="text-dark">CECyT 14 Luis Enrique Erro</option>
+                            <option value="CECyT 15 Diódoro Antúnez Echegaray" class="text-dark">CECyT 15 Diódoro Antúnez Echegaray</option>
+                            <option value="CECyT 16 Hidalgo" class="text-dark">CECyT 16 Hidalgo</option>
+                            <option value="CECyT 17 León Guanajuato" class="text-dark">CECyT 17 León Guanajuato</option>
+                            <option value="CECyT 18 Zacatecas" class="text-dark">CECyT 18 Zacatecas</option>
+                            <option value="CECyT 19 Leona Vicario" class="text-dark">CECyT 19 Leona Vicario</option>
+                            <option value="CET 1 Walter Cross Buchanan" class="text-dark">CET 1 Walter Cross Buchanan</option>
+                            <option value="otro">Otro</option>
+                    </select>
+                    </div>
+                    <div id="Escuelita" style="display: none;">     
+                    <label for="nombreEscuela" class="form-label"><i class="ti-agenda"> </i>Nombre de la escuela: </label>
+                    <input type="text" id="nombreEscuela" class=" form-control border border-white" name="escuela2">
+                    </div>
+                    <div class="form-group">
+                    <label for="entidadProcedencia" class="form-label"><i class="ti-map-alt"> </i>Entidad Federativa de Procedencia: </label>
+                    <select id="entidadProcedencia" class="form-select form-select-sm border border-white" name="entidad" required>
+                            <option value="">De click para desplegar opciones</option>
+                            <option value="Aguascalientes" class="text-dark">Aguascalientes</option>
+                            <option value="Baja California" class="text-dark">Baja California</option>
+                            <option value="Baja California Sur"class="text-dark">Baja California Sur</option>
+                            <option value="Campeche" class="text-dark">Campeche</option>
+                            <option value="Chiapas" class="text-dark">Chiapas</option>
+                            <option value="Chihuahua" class="text-dark">Chihuahua</option>
+                            <option value="Coahuila" class="text-dark">Coahuila</option>
+                            <option value="Colima" class="text-dark">Colima</option>
+                            <option value="Durango" class="text-dark">Durango</option>
+                            <option value="Estado de México" class="text-dark">Estado de México</option>
+                            <option value="Guanajuato" class="text-dark">Guanajuato</option>
+                            <option value="Guerrero" class="text-dark">Guerrero</option>
+                            <option value="Hidalgo" class="text-dark">Hidalgo</option>
+                            <option value="Jalisco" class="text-dark">Jalisco</option>
+                            <option value="Michoacán" class="text-dark">Michoacán</option>
+                            <option value="Morelos" class="text-dark">Morelos</option>
+                            <option value="Nayarit" class="text-dark">Nayarit</option>
+                            <option value="Nuevo León" class="text-dark">Nuevo León</option>
+                            <option value="Oaxaca" class="text-dark">Oaxaca</option>
+                            <option value="Puebla" class="text-dark">Puebla</option>
+                            <option value="Querétaro" class="text-dark">Querétaro</option>
+                            <option value="Quintana Roo" class="text-dark">Quintana Roo</option>
+                            <option value="San Luis Potosí" class="text-dark">San Luis Potosí</option>
+                            <option value="Sinaloa" class="text-dark">Sinaloa</option>
+                            <option value="Sonora" class="text-dark">Sonora</option>
+                            <option value="Tabasco" class="text-dark">Tabasco</option>
+                            <option value="Tamaulipas" class="text-dark">Tamaulipas</option>
+                            <option value="Tlaxcala" class="text-dark">Tlaxcala</option>
+                            <option value="Veracruz" class="text-dark">Veracruz</option>
+                            <option value="Yucatán" class="text-dark">Yucatán</option>
+                            <option value="Zacatecas" class="text-dark">Zacatecas</option>
+                            <option value="Ciudad de México" class="text-dark">Ciudad de México</option>
+                    </select>
+                    </div>
+                    <div class="form-group">
+                    <label for="promedio" class="form-label"><i class="ti-pencil-alt2"> </i>Promedio: </label>
+                    <input type="number" id="promedio" class="form-control border border-white" name="promedio" step="0.01"
+                                placeholder="Ej.10.0" required>
+                    </div>   <br>
+                        <!-- Otros campos de procedencia -->
+                    <br>
+                            <div class="form-group">
+                                <label for="opcion" class="form-check-label"><i class="ti-comments-smiley"> </i>ESCOM fue tu:</label><br>
+                                <input type="radio" required name="opcion" id="opcion1" class="form-check-input" value="Primera opcion"> 1er. opción&nbsp;&nbsp;&nbsp;
+                                <input type="radio" name="opcion" id="opcion2" class="form-check-input" value="Segunda opcion"> 2da. opción&nbsp;&nbsp;&nbsp;
+                                <input type="radio" name="opcion" id="opcion3" class="form-check-input" value="Tercera opcion"> 3ra. opción&nbsp;&nbsp;&nbsp;
+                                <input type="radio" name="opcion" id="opcion4" class="form-check-input" value="Cuarta opcion"> 4ta. opción
+                            </div><br>
+                        <!-- Otros campos de otros -->
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                            crossorigin="anonymous">
+                        </script>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-outline-success btn-lg">Continuar</button>
+                            <button type="button" class="btn btn-outline-warning btn-lg" onclick="limpiarFormulario()">Limpiar</button>
+                        </div>
+                    </div>
+                </form>
+
+
+                <script>
+      
+                    $(document).ready(function () {
+                          // Evento de escucha para el cambio del select "escuelaProcedencia"
+                          $("#escuelaProcedencia").change(function () {
+                              // Limpiar el contenido de los campos de texto si la opción no es "otro"
+                              if ($(this).val() !== "otro") {
+                                  $("#nombreEscuela").val("");  // Limpiar el contenido del campo "nombreEscuela"
+                              }
+              
+                              // Verifica si la opción seleccionada es "otro"
+                              if ($(this).val() === "otro") {
+                                  // Muestra todo el div "Escuelita" si la opción es "otro"
+                                  $("#Escuelita").show();
+                              } else {
+                                  // Oculta todo el div "Escuelita" y limpia el campo si la opción no es "otro"
+                                  $("#Escuelita").hide();
+                              }
+                          });
+              
+                          // Evento de escucha para el cambio del checkbox "tieneDiscapacidad"
+                          // Evento de escucha para el cambio del radio button "tieneDiscapacidad"
+                             $("input[name='tieneDiscapacidad']").change(function () {
+                            if ($("#tieneDiscapacidadSi").is(":checked")) {
+                              $("#tipoDiscapacidadContainer").show();
+                             } else {
+                               $("#tipoDiscapacidadContainer").hide();
+                            // Puedes ocultar el div "Otra discapacidad" y limpiar el campo aquí si es necesario
+                              }
+                              });
+              
+                          // Evento de escucha para el cambio del select "tipoDiscapacidad"
+                          $("#tipoDiscapacidad").change(function () {
+                              // Limpiar el contenido del campo de texto "otraDiscapacidad" si la opción no es "otra"
+                              if ($(this).val() !== "") {
+                                  $("#otraDiscapacidad").val("");  // Limpiar el contenido del campo "otraDiscapacidad"
+                              }
+              
+                              // Verifica si la opción seleccionada es "otra"
+                              if ($(this).val() === "") {
+                                  // Muestra el div "Otra discapacidad" si la opción es "otra"
+                                  $("#otraDiscapacidadContainer").show();
+                              } else {
+                                  // Oculta el div "Otra discapacidad" y limpia el campo si la opción no es "otra"
+                                  $("#otraDiscapacidadContainer").hide();
+                              }
+                          });
+                      });
+              
+                  </script>
+              
+              <script>
+                  // Obtén referencias a los elementos del DOM
+                  const checkbox = document.getElementById('tieneDiscapacidad');
+                  const selectDiscapacidad = document.getElementById('tipoDiscapacidad');
+                  const inputOtraDiscapacidad = document.getElementById('otraDiscapacidad');
+              
+                  // Agrega un event listener al checkbox
+                  checkbox.addEventListener('change', function() {
+                    // Si el checkbox está desmarcado, borra los valores en el select y el input
+                    if (!checkbox.checked) {
+                      selectDiscapacidad.value = '-';
+                      inputOtraDiscapacidad.value = '-';
+                    }
+                  });
+                </script>
+        </div>
+        </div>
+        </div>
+    </body>
+</html>
