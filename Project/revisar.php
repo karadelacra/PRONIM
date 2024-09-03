@@ -56,7 +56,6 @@ $resultado = $conectar->query($consulta);
 if ($resultado->num_rows == 0) {
     $crearTabla = "CREATE TABLE $tabla (
         id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-        boleta VARCHAR(30) NOT NULL UNIQUE,
         nombre VARCHAR(30) NOT NULL,
         primerApe VARCHAR(30) NOT NULL,
         segundoApe VARCHAR(30) NOT NULL,
