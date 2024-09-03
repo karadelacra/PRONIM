@@ -11228,7 +11228,7 @@ pre {
 .header {
   height: 100vh;
   max-height: 900px;
-  background: url(../imgs/main.jpg) no-repeat center center fixed;
+  background-color: #47D8E0;
   background-size: cover;
   min-height: 750px;
 }
@@ -11293,7 +11293,7 @@ pre {
 }
 
 .has-img-bg {
-  background: url(../imgs/about-section.jpg) no-repeat center center;
+  background: url('../imgs/about-section.webp')  no-repeat center center;
   background-size: cover;
 }
 
@@ -11308,7 +11308,7 @@ pre {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(../imgs/book-table-img.jpg) no-repeat center center fixed;
+  background-color: #c7031e;
   background-size: cover;
   z-index: -1;
   opacity: .3;
