@@ -20,7 +20,7 @@
 </head>
     <body>
         <header id="header">
-            <img src="images/escom.jpg" alt="" class="logo">
+            <img src="images/logobc1.gif" alt="" class="logo">
             <span class="brand-txt">Registro</span>
           <ul class="main-menu">
             <li class="menu-item"><a href="index.html">Inicio</a></li>
@@ -106,27 +106,43 @@
                     <input type="text" id="colonia" class="form-control border border-white" name="colonia" placeholder="Nombre completo" required>
                     </div>
                     <div class="form-group">
-                    <label for="alcaldia" class="form-label"><i class="ti-direction"> </i>Alcaldía: </label>
-                        <select name="alcaldia" id="alcaldia" class="form-select form-select-sm border border-white" required>
-                            <option value="" >Seleccione una opcion</option>
-                            <option value="Alvaro Obregon" class="text-dark">Alvaro Obregón</option>
-                            <option value="Azcapotzalco" class="text-dark">Azcapotzalco</option>
-                            <option value="Benito Juarez" class="text-dark">Benito Juarez</option>
-                            <option value="Coyoacan" class="text-dark">Coyoacán</option>
-                            <option value="Cuajimalpa de Morelos" class="text-dark">Cuajimalpa de Morelos</option>
-                            <option value="Cuauhtemoc" class="text-dark">Cuauhtemoc</option>
-                            <option value="Gustavo A. Madero" class="text-dark">Gustavo A. Madero</option>
-                            <option value="Iztacalco" class="text-dark">Iztacalco</option>
-                            <option value="Iztapalapa" class="text-dark">Iztapalapa</option>
-                            <option value="La Magdalena Contreras" class="text-dark">La Magdalena Contreras</option>
-                            <option value="Miguel Hidalgo" class="text-dark">Miguel Hidalgo</option>
-                            <option value="Milpa Alta" class="text-dark">Milpa Alta</option>
-                            <option value="Tlahuac" class="text-dark">Tlahuac</option>
-                            <option value="Tlalpan" class="text-dark">Tlalpan</option>
-                            <option value="Venustiano Carranza" class="text-dark">Venustiano Carranza</option>
-                            <option value="Xochimilco" class="text-dark">Xochimilco</option>
+                        <label for="entidadProcedencia" class="form-label"><i class="ti-map-alt"> </i>Entidad Federativa de Procedencia: </label>
+                        <select id="entidadProcedencia" class="form-select form-select-sm border border-white" name="entidad" required>
+                                <option value="">De click para desplegar opciones</option>
+                                <option value="Aguascalientes" class="text-dark">Aguascalientes</option>
+                                <option value="Baja California" class="text-dark">Baja California</option>
+                                <option value="Baja California Sur"class="text-dark">Baja California Sur</option>
+                                <option value="Campeche" class="text-dark">Campeche</option>
+                                <option value="Chiapas" class="text-dark">Chiapas</option>
+                                <option value="Chihuahua" class="text-dark">Chihuahua</option>
+                                <option value="Coahuila" class="text-dark">Coahuila</option>
+                                <option value="Colima" class="text-dark">Colima</option>
+                                <option value="Durango" class="text-dark">Durango</option>
+                                <option value="Estado de México" class="text-dark">Estado de México</option>
+                                <option value="Guanajuato" class="text-dark">Guanajuato</option>
+                                <option value="Guerrero" class="text-dark">Guerrero</option>
+                                <option value="Hidalgo" class="text-dark">Hidalgo</option>
+                                <option value="Jalisco" class="text-dark">Jalisco</option>
+                                <option value="Michoacán" class="text-dark">Michoacán</option>
+                                <option value="Morelos" class="text-dark">Morelos</option>
+                                <option value="Nayarit" class="text-dark">Nayarit</option>
+                                <option value="Nuevo León" class="text-dark">Nuevo León</option>
+                                <option value="Oaxaca" class="text-dark">Oaxaca</option>
+                                <option value="Puebla" class="text-dark">Puebla</option>
+                                <option value="Querétaro" class="text-dark">Querétaro</option>
+                                <option value="Quintana Roo" class="text-dark">Quintana Roo</option>
+                                <option value="San Luis Potosí" class="text-dark">San Luis Potosí</option>
+                                <option value="Sinaloa" class="text-dark">Sinaloa</option>
+                                <option value="Sonora" class="text-dark">Sonora</option>
+                                <option value="Tabasco" class="text-dark">Tabasco</option>
+                                <option value="Tamaulipas" class="text-dark">Tamaulipas</option>
+                                <option value="Tlaxcala" class="text-dark">Tlaxcala</option>
+                                <option value="Veracruz" class="text-dark">Veracruz</option>
+                                <option value="Yucatán" class="text-dark">Yucatán</option>
+                                <option value="Zacatecas" class="text-dark">Zacatecas</option>
+                                <option value="Ciudad de México" class="text-dark">Ciudad de México</option>
                         </select>
-                    </div>
+                        </div>
                     <div class="form-group">
                     <label for="CodigoPost" class="form-label"><i class="ti-direction"> </i>Código Postal: </label> 
                     <input type="number" maxlength="5" name="codigo" id= "CodigoPost" class="form-control border border-white" placeholder="Solo 5 dígitos" required>
@@ -142,90 +158,10 @@
                     <br>
                         <!-- Otros campos de contacto -->
                        
-                    <div class="form-group">
-                    <h3 class="d-flex justify-content-center">Procedencia</h3>
-                    <label for="escuelaProcedencia" class="form-label"><i class="ti-agenda"> </i>Escuela de procedencia: </label>
-                    <select id="escuelaProcedencia" class="form-select form-select-sm border border-white" name="escuela" required>
-                            <option value="">De click para desplegar opciones</option>
-                            <option value="CECyT 1 Gonzalo Vázquez Vela" class="text-dark">CECyT 1 Gonzalo Vázquez Vela</option>
-                            <option value="CECyT 2 Miguel Bernard" class="text-dark">CECyT 2 Miguel Bernard</option>
-                            <option value="CECyT 3 Estanislao Ramírez Ruiz" class="text-dark">CECyT 3 Estanislao Ramírez Ruiz</option>
-                            <option value="CECyT 4 Lázaro Cárdenas" class="text-dark">CECyT 4 Lázaro Cárdenas</option>
-                            <option value="CECyT 5 Benito Juárez García" class="text-dark">CECyT 5 Benito Juárez García </option>
-                            <option value="CECyT 6 Miguel Othón de Mendizábal" class="text-dark">CECyT 6 Miguel Othón de Mendizábal</option>
-                            <option value="CECyT 7 Cuauhtémoc" class="text-dark">CECyT 7 Cuauhtémoc</option>
-                            <option value="CECyT 8 Narciso Bassols García" class="text-dark">CECyT 8 Narciso Bassols García </option>
-                            <option value="CECyT 9 Juan de Dios Bátiz" class="text-dark">CECyT 9 Juan de Dios Bátiz</option>
-                            <option value="CECyT 10 Carlos Vallejo Márquez" class="text-dark">CECyT 10 Carlos Vallejo Márquez</option>
-                            <option value="CECyT 11 Wilfrido Massieu Pérez" class="text-dark">CECyT 11 Wilfrido Massieu Pérez</option>
-                            <option value="CECyT 12 José María Morelos y Pavón" class="text-dark">CECyT 12 José María Morelos y Pavón </option>
-                            <option value="CECyT 13 Ricardo Flores Magón" class="text-dark">CECyT 13 Ricardo Flores Magón</option>
-                            <option value="CECyT 14 Luis Enrique Erro" class="text-dark">CECyT 14 Luis Enrique Erro</option>
-                            <option value="CECyT 15 Diódoro Antúnez Echegaray" class="text-dark">CECyT 15 Diódoro Antúnez Echegaray</option>
-                            <option value="CECyT 16 Hidalgo" class="text-dark">CECyT 16 Hidalgo</option>
-                            <option value="CECyT 17 León Guanajuato" class="text-dark">CECyT 17 León Guanajuato</option>
-                            <option value="CECyT 18 Zacatecas" class="text-dark">CECyT 18 Zacatecas</option>
-                            <option value="CECyT 19 Leona Vicario" class="text-dark">CECyT 19 Leona Vicario</option>
-                            <option value="CET 1 Walter Cross Buchanan" class="text-dark">CET 1 Walter Cross Buchanan</option>
-                            <option value="otro">Otro</option>
-                    </select>
-                    </div>
-                    <div id="Escuelita" style="display: none;">     
-                    <label for="nombreEscuela" class="form-label"><i class="ti-agenda"> </i>Nombre de la escuela: </label>
-                    <input type="text" id="nombreEscuela" class=" form-control border border-white" name="escuela2">
-                    </div>
-                    <div class="form-group">
-                    <label for="entidadProcedencia" class="form-label"><i class="ti-map-alt"> </i>Entidad Federativa de Procedencia: </label>
-                    <select id="entidadProcedencia" class="form-select form-select-sm border border-white" name="entidad" required>
-                            <option value="">De click para desplegar opciones</option>
-                            <option value="Aguascalientes" class="text-dark">Aguascalientes</option>
-                            <option value="Baja California" class="text-dark">Baja California</option>
-                            <option value="Baja California Sur"class="text-dark">Baja California Sur</option>
-                            <option value="Campeche" class="text-dark">Campeche</option>
-                            <option value="Chiapas" class="text-dark">Chiapas</option>
-                            <option value="Chihuahua" class="text-dark">Chihuahua</option>
-                            <option value="Coahuila" class="text-dark">Coahuila</option>
-                            <option value="Colima" class="text-dark">Colima</option>
-                            <option value="Durango" class="text-dark">Durango</option>
-                            <option value="Estado de México" class="text-dark">Estado de México</option>
-                            <option value="Guanajuato" class="text-dark">Guanajuato</option>
-                            <option value="Guerrero" class="text-dark">Guerrero</option>
-                            <option value="Hidalgo" class="text-dark">Hidalgo</option>
-                            <option value="Jalisco" class="text-dark">Jalisco</option>
-                            <option value="Michoacán" class="text-dark">Michoacán</option>
-                            <option value="Morelos" class="text-dark">Morelos</option>
-                            <option value="Nayarit" class="text-dark">Nayarit</option>
-                            <option value="Nuevo León" class="text-dark">Nuevo León</option>
-                            <option value="Oaxaca" class="text-dark">Oaxaca</option>
-                            <option value="Puebla" class="text-dark">Puebla</option>
-                            <option value="Querétaro" class="text-dark">Querétaro</option>
-                            <option value="Quintana Roo" class="text-dark">Quintana Roo</option>
-                            <option value="San Luis Potosí" class="text-dark">San Luis Potosí</option>
-                            <option value="Sinaloa" class="text-dark">Sinaloa</option>
-                            <option value="Sonora" class="text-dark">Sonora</option>
-                            <option value="Tabasco" class="text-dark">Tabasco</option>
-                            <option value="Tamaulipas" class="text-dark">Tamaulipas</option>
-                            <option value="Tlaxcala" class="text-dark">Tlaxcala</option>
-                            <option value="Veracruz" class="text-dark">Veracruz</option>
-                            <option value="Yucatán" class="text-dark">Yucatán</option>
-                            <option value="Zacatecas" class="text-dark">Zacatecas</option>
-                            <option value="Ciudad de México" class="text-dark">Ciudad de México</option>
-                    </select>
-                    </div>
-                    <div class="form-group">
-                    <label for="promedio" class="form-label"><i class="ti-pencil-alt2"> </i>Promedio: </label>
-                    <input type="number" id="promedio" class="form-control border border-white" name="promedio" step="0.01"
-                                placeholder="Ej.10.0" required>
-                    </div>   <br>
+                       <br>
                         <!-- Otros campos de procedencia -->
                     <br>
-                            <div class="form-group">
-                                <label for="opcion" class="form-check-label"><i class="ti-comments-smiley"> </i>ESCOM fue tu:</label><br>
-                                <input type="radio" required name="opcion" id="opcion1" class="form-check-input" value="Primera opcion"> 1er. opción&nbsp;&nbsp;&nbsp;
-                                <input type="radio" name="opcion" id="opcion2" class="form-check-input" value="Segunda opcion"> 2da. opción&nbsp;&nbsp;&nbsp;
-                                <input type="radio" name="opcion" id="opcion3" class="form-check-input" value="Tercera opcion"> 3ra. opción&nbsp;&nbsp;&nbsp;
-                                <input type="radio" name="opcion" id="opcion4" class="form-check-input" value="Cuarta opcion"> 4ta. opción
-                            </div><br>
+                            <br>
                         <!-- Otros campos de otros -->
                         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
                             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -242,31 +178,15 @@
                 <script>
       
                     $(document).ready(function () {
-                          // Evento de escucha para el cambio del select "escuelaProcedencia"
-                          $("#escuelaProcedencia").change(function () {
-                              // Limpiar el contenido de los campos de texto si la opción no es "otro"
-                              if ($(this).val() !== "otro") {
-                                  $("#nombreEscuela").val("");  // Limpiar el contenido del campo "nombreEscuela"
-                              }
-              
-                              // Verifica si la opción seleccionada es "otro"
-                              if ($(this).val() === "otro") {
-                                  // Muestra todo el div "Escuelita" si la opción es "otro"
-                                  $("#Escuelita").show();
-                              } else {
-                                  // Oculta todo el div "Escuelita" y limpia el campo si la opción no es "otro"
-                                  $("#Escuelita").hide();
-                              }
-                          });
-              
+                                       
                           // Evento de escucha para el cambio del checkbox "tieneDiscapacidad"
-                          // Evento de escucha para el cambio del radio button "tieneDiscapacidad"
+                          
                              $("input[name='tieneDiscapacidad']").change(function () {
                             if ($("#tieneDiscapacidadSi").is(":checked")) {
                               $("#tipoDiscapacidadContainer").show();
                              } else {
                                $("#tipoDiscapacidadContainer").hide();
-                            // Puedes ocultar el div "Otra discapacidad" y limpiar el campo aquí si es necesario
+                            
                               }
                               });
               
