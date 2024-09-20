@@ -42,3 +42,23 @@ Es un entorno de ejecución de JavaScript que permite ejecutar código JavaScrip
 
 - Node es un compilador de javascript en escritorio lo que nos permite utilizar este lenguaje en el back end ,mismo que evita la necesidad de tener 2 lenguajes distintos en el proyecto
 - Utiliza un modelo de entrada/salida no bloqueante (asincrono) y basado en eventos, lo que lo hace altamente eficiente para manejar un gran número de conexiones simultáneas.
+
+## Servidor y despliege de la aplicacion
+
+En lo que respecta al servidor debido a que el sistema se ocupara en todo mexico y este mismo almacenara el registro de todas las evaluaciones y perfiles de los alumnos se buscara un servicio tipo Paas (plataform as a service) esto debido a que el almacenaje sea escalable asi mismo que se mantenga siempre activo.
+
+El servidor debera solventar las siguientes cualidades del sistema
+
+- Posibilidad de escalabilidad en lo que respecta el almacenaje
+- Conexion con toda la republica del pais
+- Gestionar una gran cantidad de usuarios conectados simultaneamente (picos de conexion los fines de mes)
+- Servidor dedicado
+- Control de la informacion correctamente ya que esta puede tener informacion relativamente sensible
+
+Dado estas cualidades se considero contratar el servicio de aws, con un sistema de servidor dedicado y almacenaje expandible.
+
+El prooverdor nos proovera de hasta 20 nodos cada uno con 1tb de almacenaje los cuales se conectaran para aumentar el poder de computo y almacenaje,se tiene contemplado que minimo 1 nodo estara activo con hasta un maximo de los 20 nodos. teniendo eso en cuenta se generaron los siguientes presupuesto.
+
+![AWS_configuracion](img\AWS_Configuracion.png)
+![AWS_computo](img\AWS-computo.png)
+![AWS_resumen](./img/AWS_resumen.png)
