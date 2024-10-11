@@ -1,3 +1,9 @@
+---
+created: 2024-09-19T17:30
+updated: 2024-10-10T19:20
+---
+
+
 # Tecnologias a ocupar en el proyecto
 
 Se utilizara el stack MERN
@@ -61,4 +67,3 @@ El prooverdor nos proovera de hasta 20 nodos cada uno con 1tb de almacenaje los 
 
 ![AWS_configuracion](img\AWS_Configuracion.png)
 ![AWS_computo](img\AWS-computo.png)
-![AWS_resumen](./img/AWS_resumen.png)

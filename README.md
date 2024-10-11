@@ -1,3 +1,8 @@
+---
+created: 2024-09-18T22:25
+updated: 2024-10-10T19:20
+---
+
 # PRONIMS
 
 ## Integrantes

@@ -1,3 +1,9 @@
+---
+created: 2024-09-18T21:51
+updated: 2024-10-10T19:20
+---
+
+
 # PRONIM
 
 Plataforma que brinda apoyo para la educación a migrantes nacionales e internacionales en todos los estados.
