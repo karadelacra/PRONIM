@@ -2,7 +2,6 @@
 created: 2024-09-18T22:25
 updated: 2024-10-10T19:20
 ---
-
 # PRONIMS
 
 ## Integrantes
@@ -24,8 +23,5 @@ updated: 2024-10-10T19:20
   - Aprendiendo UML,MERN y MCV (Espero el 23 haya terminado los tutoriales, por el momento ando viendo primero el de UML)
   - Estoy pensando en hacer con dibujos un esquema de como se veria (No se si empezar de una vez o terminando los tutoriales)
 - Agustin
-  - A
 - Karel
-  - A
 - Victor
-  - A
