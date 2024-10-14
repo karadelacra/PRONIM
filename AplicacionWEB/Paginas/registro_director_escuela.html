@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Director de Escuela</title>
+</head>
+<body>
+    <h2>Registrar Director de Escuela</h2>
+    <form id="registroDirectorEscuelaForm">
+        <label for="Nombre">Nombre:</label>
+        <input type="text" id="Nombre" name="Nombre" required><br>
+
+        <label for="Primer_Apellido">Primer Apellido:</label>
+        <input type="text" id="Primer_Apellido" name="Primer_Apellido" required><br>
+
+        <label for="Segundo_Apellido">Segundo Apellido:</label>
+        <input type="text" id="Segundo_Apellido" name="Segundo_Apellido" required><br>
+
+        <label for="Fecha_de_Nacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="Fecha_de_Nacimiento" name="Fecha_de_Nacimiento" required><br>
+
+        <label for="CURP">CURP:</label>
+        <input type="text" id="CURP" name="CURP" required><br>
+
+        <label for="Sexo">Sexo:</label>
+        <select id="Sexo" name="Sexo">
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+            <option value="Otros">Otros</option>
+        </select><br>
+
+        <label for="RFC">RFC:</label>
+        <input type="text" id="RFC" name="RFC" required><br>
+
+        <label for="Cedula_Profesional">Cédula Profesional:</label>
+        <input type="text" id="Cedula_Profesional" name="Cedula_Profesional" required><br>
+
+        <label  for="ID_CT" >ID_CT:</label>
+        <input type="text" id="ID_CT" name="ID_CT" required><br> 
+
+        <label for="Correo">Correo:</label>
+        <input type="email" id="Correo" name="Correo" required><br>
+
+        <label for="Contraseña">Contraseña:</label>
+        <input type="password" id="Contraseña" name="Contraseña" required><br>
+
+        <button type="submit">Registrar</button>
+    </form>
+
+    <script>
+        document.getElementById('registroDirectorEscuelaForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = {
+                nombre: document.getElementById('Nombre').value,
+                primer_apellido: document.getElementById('Primer_Apellido').value,
+                segundo_apellido: document.getElementById('Segundo_Apellido').value,
+                fecha_nacimiento: document.getElementById('Fecha_de_Nacimiento').value,
+                curp: document.getElementById('CURP').value,
+                sexo: document.getElementById('Sexo').value,
+                rfc: document.getElementById('RFC').value,
+                cedula_profesional: document.getElementById('Cedula_Profesional').value,
+                ID_CT: documet.getElementById("ID_CT").value,
+                correo: document.getElementById('Correo').value,
+                contraseña: document.getElementById('Contraseña').value
+            };
+
+            fetch('https://api.tuservidor.com/registro_director_escuela', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Director de Escuela registrado con éxito');
+                } else {
+                    alert('Error al registrar al Director de Escuela');
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

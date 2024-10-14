@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Tutor</title>
+</head>
+<body>
+    <h2>Registrar Tutor</h2>
+    <form id="registroTutorForm">
+        <label for="Nombre">Nombre:</label>
+        <input type="text" id="Nombre" name="Nombre" required><br>
+
+        <label for="Primer_Apellido">Primer Apellido:</label>
+        <input type="text" id="Primer_Apellido" name="Primer_Apellido" required><br>
+
+        <label for="Segundo_Apellido">Segundo Apellido:</label>
+        <input type="text" id="Segundo_Apellido" name="Segundo_Apellido" required><br>
+
+        <label for="fecha_de_nacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fecha_de_nacimiento" name="fecha_de_nacimiento" required><br>
+
+        <label for="curp">CURP:</label>
+        <input type="text" id="curp" name="curp" required><br>
+
+        <label for="id_sexo">Sexo:</label>
+        <select id="id_sexo" name="id_sexo">
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+            <option value="Otros">Otros</option>
+        </select><br>
+
+        <label for="id_origen_etnico">Origen Étnico:</label>
+        <input type="text" id="id_origen_etnico" name="id_origen_etnico" required><br>
+
+        <label for="id_idiomas">Idiomas:</label>
+        <input type="text" id="id_idiomas" name="id_idiomas" required><br>
+
+        <label for="id_condicion_migratoria">Condición Migratoria:</label>
+        <input type="text" id="id_condicion_migratoria" name="id_condicion_migratoria" required><br>
+
+        <label for="id_escolaridad">Escolaridad:</label>
+        <input type="text" id="id_escolaridad" name="id_escolaridad" required><br>
+
+        <label for="id_nacionalidad">Nacionalidad:</label>
+        <input type="text" id="id_nacionalidad" name="id_nacionalidad" required><br>
+
+        <button type="submit">Registrar</button>
+    </form>
+
+    <script>
+        document.getElementById('registroTutorForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = {
+                Nombre: document.getElementById('Nombre').value,
+                Primer_Apellido: document.getElementById('Primer_Apellido').value,
+                Segundo_Apellido: document.getElementById('Segundo_Apellido').value,
+                fecha_nacimiento: document.getElementById('fecha_nacimiento').value,
+                curp: document.getElementById('curp').value,
+                id_sexo: document.getElementById('id_sexo').value,
+                id_origen_etnico: document.getElementById('id_origen_etnico').value,
+                id_idiomas: document.getElementById('id_idiomas').value,
+                id_condicion_migratoria: document.getElementById('id_condicion_migratoria').value,
+                id_escolaridad: document.getElementById('id_escolaridad').value,
+                id_nacionalidad: document.getElementById('id_nacionalidad').value
+            };
+
+            fetch('https://api.tuservidor.com/registro_tutor', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Tutor registrado con éxito');
+                } else {
+                    alert('Error al registrar al Tutor');
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

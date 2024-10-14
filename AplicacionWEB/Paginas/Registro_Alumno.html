@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Alumno</title>
+</head>
+<body>
+    <h2>Registrar Alumno</h2>
+    <form id="registroAlumnoForm">
+        <label for="Nombre">Nombre:</label>
+        <input type="text" id="Nombre" name="Nombre" required><br>
+
+        <label for="Primer_Apellido">Primer Apellido:</label>
+        <input type="text" id="Primer_Apellido" name="Primer_Apellido" required><br>
+
+        <label for="Segundo_Apellido">Segundo Apellido:</label>
+        <input type="text" id="Segundo_Apellido" name="Segundo_Apellido" required><br>
+
+        <label for="Fecha_de_Nacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="Fecha_de_Nacimiento" name="Fecha_de_Nacimiento" required><br>
+
+        <label for="CURP">CURP:</label>
+        <input type="text" id="CURP" name="CURP" required><br>
+
+        <label for="Sexo">Sexo:</label>
+        <select id="Sexo" name="Sexo">
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+            <option value="Otros">Otros</option>
+        </select><br>
+
+        <label for="ID_Grupo_actual">ID Grupo Actual:</label>
+        <input type="text" id="ID_Grupo_actual" name="ID_Grupo_actual" required><br>
+
+        <label for="ID_Grupo_anterior">ID Grupo Anterior:</label>
+        <input type="text" id="ID_Grupo_anterior" name="ID_Grupo_anterior" required><br>
+
+        <label for="ID_Condicion">ID Condición:</label>
+        <input type="text" id="ID_Condicion" name="ID_Condicion" required><br>
+
+        <label for="ID_Nacionalidad">ID Nacionalidad:</label>
+        <input type="text" id="ID_Nacionalidad" name="ID_Nacionalidad" required><br>
+
+        <label for="ID_Origen_Etnico">ID Origen Étnico:</label>
+        <input type="text" id="ID_Origen_Etnico" name="ID_Origen_Etnico" required><br>
+
+        <button type="submit">Registrar</button>
+    </form>
+
+    <script>
+        document.getElementById('registroAlumnoForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = {
+                Nombre: document.getElementById('Nombre').value,
+                Primer_Apellido: document.getElementById('Primer_Apellido').value,
+                Segundo_Apellido: document.getElementById('Segundo_Apellido').value,
+                Fecha_de_Nacimiento: document.getElementById('Fecha_de_Nacimiento').value,
+                CURP: document.getElementById('CURP').value,
+                Sexo: document.getElementById('Sexo').value,
+                ID_Grupo_actual: document.getElementById('ID_Grupo_actual').value,
+                ID_Grupo_anterior: document.getElementById('ID_Grupo_anterior').value,
+                ID_Condicion: document.getElementById('ID_Condicion').value,
+                ID_Nacionalidad: document.getElementById('ID_Nacionalidad').value,
+                ID_Origen_Etnico: document.getElementById('ID_Origen_Etnico').value
+            };
+
+            fetch('https://api.tuservidor.com/registro_alumno', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Alumno registrado con éxito');
+                } else {
+                    alert('Error al registrar al Alumno');
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

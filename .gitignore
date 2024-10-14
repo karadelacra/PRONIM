@@ -1,2 +1,30 @@
 # Excluir todos los archivos con extensión .edtz
 *.edtz
+
+# Excluir todo lo de react
+
+# dependencies
+/AplicacionWEB/frontend/node_modules
+/AplicacionWEB/frontend/.pnp
+/AplicacionWEB/frontend/.pnp.js
+
+# testing
+/AplicacionWEB/frontend/coverage
+
+# production
+/AplicacionWEB/frontend/build
+
+# misc
+/AplicacionWEB/frontend/.DS_Store
+/AplicacionWEB/frontend/.env.local
+/AplicacionWEB/frontend/.env.development.local
+/AplicacionWEB/frontend/.env.test.local
+/AplicacionWEB/frontend/.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Excluir todo lo del back end
+/AplicacionWEB/backend/node_modules
+

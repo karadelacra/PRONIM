@@ -1,0 +1,278 @@
+@startuml
+' Definición de tablas
+entity "Sexo" as sexo {
+    *Nombre : varchar
+    --
+    Descripcion : varchar
+}
+
+entity "Usuario" as usuario {
+    *ID : int
+    --
+    Nombre : varchar
+    Primer_Apellido : varchar
+    Segundo_Apellido : varchar [opcional]
+    Fecha_de_nacimiento : date
+    Contraseña : varchar
+    CURP : varchar [opcional]
+    Activo : boolean
+    Sexo : varchar
+    Fotografía : blob
+}
+
+entity "Usuario_Adulto" as usuario_adulto << Usuario >> {
+    --
+    RFC : varchar
+    Cedula_Profesional : varchar
+    Correo : varchar
+}
+
+entity "Alumno" as alumno {
+    *ID : int
+    --
+    Nombre : varchar
+    Primer_Apellido : varchar
+    Segundo_Apellido : varchar [opcional]
+    Fecha_de_nacimiento : date
+    CURP : varchar [opcional]
+    Activo : boolean
+    Sexo : varchar
+    ID_Grupo_actual : int
+    ID_Grupo_anterior : int [opcional]
+    ID_Condicion : int
+    ID_Nacionalidad : int
+    ID_Origen_Etnico : int
+}
+
+entity "Profesor" as profesor << Usuario_Adulto >> {
+    --
+    ID_CT : int
+}
+
+entity "Coordinador_Nacional" as coord_nac << Usuario_Adulto >> {
+    --
+    Fecha_inicio : date
+    Fecha_fin : date
+}
+
+entity "Coordinador_Estatal" as coord_est << Usuario_Adulto >> {
+    --
+    ID_Estado : int
+    Fecha_inicio : date
+    Fecha_fin : date
+}
+
+entity "Estado" as estado {
+    *ID_Estado : int
+    --
+    Nombre : varchar
+}
+
+entity "Centro_de_trabajo" as centro_trabajo {
+    *ID_CT : int
+    --
+    Calle : varchar
+    Numero : varchar
+    Colonia : varchar
+    Municipio : varchar
+    ID_Estado : int
+    ID_Director : int
+    ID_Formacion : int
+}
+
+entity "CCT" as cct {
+    *CCT : varchar
+    --
+    ID_Centro_trabajo : int
+    Prestada : boolean
+}
+
+entity "Prestamos_CCT" as prestamos_cct {
+    *inicio_prestamo : date
+    *fin_prestamo : date
+    --
+    Receptor : int
+    CCT : varchar
+}
+
+entity "Materia" as materia {
+    *ID_Materia : int
+    --
+    Nombre_Materia : varchar
+    ID_Grado : int
+}
+
+entity "Grado" as grado {
+    *ID_Grado : int
+    --
+    Nombre_Grado : varchar
+    ID_Formacion : int
+}
+
+entity "Formacion" as formacion {
+    *ID_Formacion : int
+    --
+    Nombre_Formacion : varchar
+}
+
+entity "Plan_de_Estudio" as plan_estudio {
+    *ID_Plan_de_Estudio : int
+    --
+    ID_Materia : int
+    Inicio_Vigencia : date
+    Termino_Vigencia : date
+}
+
+entity "Habilidades" as habilidad {
+    *ID_Habilidad : int
+    --
+    Nombre_Habilidad : varchar
+    Descripcion_Habilidad : varchar
+}
+
+entity "Tema" as tema  {
+    *ID_Tema : int
+    --
+    ID_Plan_de_Estudio : int
+    Nombre_tema : varchar
+    ID_Habilidad : int
+}
+
+entity "Grupo" as grupo {
+    *ID_Grupo : int
+    --
+    ID_Profesor : int
+    ID_Grado : int
+    ID_Materia : int [opcional]
+}
+
+entity "Notas" as notas {
+    *ID_Nota : int
+    --
+    ID_Profesor : int
+    ID_Alumno : int
+    Nota : decimal
+    ID_Tipo_Nota : int
+    Fecha_Creación : date
+}
+
+entity "Tipo_Nota" as tipo_nota {
+    *ID_TN : int
+    --
+    Tipo_Nota : varchar
+    Prioridad : int
+}
+
+entity "Calificacion" as calificacion {
+    *Id_Calificacion : int
+    --
+    Calificacion : decimal
+    ID_Alumno : int
+    ID_grado : int
+    ID_materia : int
+    Bimestre : int
+}
+
+entity "Condicion_Migratoria" as condicion_migratoria {
+    *Id_condicion : int
+    --
+    Descripcion : varchar
+    Nombre : varchar
+}
+
+entity "Nacionalidad" as nacionalidad {
+    *Id_nacionalidad : int
+    --
+    Nombre : varchar
+}
+
+entity "Origen_Etnico" as origen_etnico {
+    *Id_origen : int
+    --
+    Nombre : varchar
+    Descripción : varchar
+}
+
+entity "Idiomas" as idiomas {
+    *Id_idioma : int
+    --
+    Nombre : varchar
+}
+
+entity "Escolaridad" as escolaridad {
+    *Id_escolaridad : int
+    --
+    Nombre : varchar
+    Descripción : varchar
+}
+
+entity "Tutor" as tutor {
+    *Id_tutor : int
+    --
+    Nombre : varchar
+    Primer_Apellido : varchar
+    Segundo_Apellido : varchar
+    id_sexo : varchar
+    fecha_de_nacimiento : date
+    curp : varchar
+    id_origen_etnico : int
+    id_idiomas : int
+    id_condicion_migratoria : int
+    id_escolaridad : int
+}
+
+entity "Notificaciones" as notificaciones {
+    *Id_noti : int
+    --
+    fecha_notificacion : date
+    descripcion : varchar
+    id_usuario : int
+    estado : boolean
+}
+
+' Relaciones entre entidades
+usuario_adulto --|> usuario
+profesor --|> usuario_adulto
+coord_nac --|> usuario_adulto
+coord_est --|> usuario_adulto
+
+usuario ||--o{ sexo : "Tiene"
+alumno ||--o{ sexo : "Tiene"
+alumno ||--o{ origen_etnico : "Pertenece a"
+tutor ||--o{ origen_etnico : "Pertenece a"
+profesor ||--o{ centro_trabajo : "Dirige"
+centro_trabajo ||--o{ estado : "Ubicado en"
+centro_trabajo ||--o{ formacion : "Ofrece"
+
+cct ||--o{ centro_trabajo : "Asociado con"
+prestamos_cct ||--o{ cct : "Incluye"
+prestamos_cct ||--o{ centro_trabajo : "Receptor"
+
+materia ||--o{ grado : "Se imparte en"
+plan_estudio ||--o{ materia : "Incluye"
+tema ||--o{ plan_estudio : "Pertenece a"
+tema ||--o{ habilidad : "Requiere"
+
+grupo ||--o{ profesor : "Es asignado a"
+grupo ||--o{ grado : "Es parte de"
+grupo ||--o{ materia : "Puede incluir"
+
+notas ||--o{ profesor : "Otorga"
+notas ||--o{ alumno : "Recibe"
+notas ||--o{ tipo_nota : "Clasifica"
+
+calificacion ||--o{ alumno : "Corresponde a"
+calificacion ||--o{ grado : "Pertenece a"
+calificacion ||--o{ materia : "Evaluado en"
+
+tutor ||--o{ sexo : "Tiene"
+tutor ||--o{ condicion_migratoria : "Pertenece a"
+tutor ||--o{ nacionalidad : "Pertenece a"
+tutor ||--o{ idiomas : "Habla"
+tutor ||--o{ escolaridad : "Tiene"
+
+alumno ||--o{ condicion_migratoria : "Pertenece a"
+alumno ||--o{ nacionalidad : "Pertenece a"
+
+notificaciones ||--o{ usuario : "Pertenece a"
+@enduml
